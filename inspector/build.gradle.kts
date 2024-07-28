@@ -46,13 +46,11 @@ val inspectorVersion = "v1.4.4"
 val inspectorRevision = runCatching {
     System.getenv("ProductRevision") ?: Runtime
         .getRuntime()
-        .exec("git rev-list HEAD --count")
-        .let { process ->
-            process.waitFor()
-            val output = process.inputStream.use {
-                it.bufferedReader().use(BufferedReader::readText)
-            }
-            process.destroy()
+        .exec(arrayOf("git", "rev-list", "HEAD", "--count"))
+        .run {
+            waitFor()
+            val output = inputStream.bufferedReader().use(BufferedReader::readText)
+            destroy()
             "r" + output.trim()
         }
 }.getOrDefault("r0")
@@ -93,13 +91,13 @@ tasks {
     }
 
     withType<KotlinCompile> {
-        kotlinOptions {
-            freeCompilerArgs = listOf(
-                "-opt-in=kotlin.RequiresOptIn",
-                "-opt-in=kotlinx.coroutines.ExperimentalCoroutinesApi",
-                "-opt-in=kotlinx.coroutines.InternalCoroutinesApi",
-                "-opt-in=kotlinx.serialization.ExperimentalSerializationApi",
-                "-opt-in=kotlin.io.path.ExperimentalPathApi",
+        compilerOptions {
+            optIn = listOf(
+                "kotlin.RequiresOptIn",
+                "kotlinx.coroutines.ExperimentalCoroutinesApi",
+                "kotlinx.coroutines.InternalCoroutinesApi",
+                "kotlinx.serialization.ExperimentalSerializationApi",
+                "kotlin.io.path.ExperimentalPathApi",
             )
         }
     }
