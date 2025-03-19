@@ -28,6 +28,6 @@ jobs:
           distribution: zulu
 
       - name: Build project
-        uses: gradle/gradle-build-action@v2
+        uses: gradle/gradle-build-action@v3
         with:
           arguments: :inspector:shadowJar
