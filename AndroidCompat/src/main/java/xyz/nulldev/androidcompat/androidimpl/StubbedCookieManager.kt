@@ -34,12 +34,14 @@ class StubbedCookieManager : CookieManager() {
         throw NotImplementedError()
     }
 
+    @Deprecated("Deprecated in Java")
     override fun removeSessionCookie() {
     }
 
     override fun removeSessionCookies(callback: ValueCallback<Boolean>?) {
     }
 
+    @Deprecated("Deprecated in Java")
     override fun removeAllCookie() {
     }
 
@@ -54,6 +56,7 @@ class StubbedCookieManager : CookieManager() {
         throw NotImplementedError()
     }
 
+    @Deprecated("Deprecated in Java")
     override fun removeExpiredCookie() {
     }
 

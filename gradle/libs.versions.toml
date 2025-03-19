@@ -1,16 +1,16 @@
 [versions]
-coroutines_version = "1.7.3"
-dex2jar_version = "2.4.10"
-kotlin_version = "1.9.21"
-okhttp_version = "5.0.0-alpha.11"
-serialization_version = "1.6.2"
+coroutines_version = "1.8.1"
+dex2jar_version = "2.4.21"
+kotlin_version = "2.0.0"
+okhttp_version = "5.0.0-alpha.14"
+serialization_version = "1.7.1"
 
 [libraries]
 coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "coroutines_version" }
 coroutines-jdk = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-jdk8", version.ref = "coroutines_version" }
 
-injekt-core = { module = "com.github.mihonapp:injekt", version = "91edab2317" } 
-jsoup = "org.jsoup:jsoup:1.16.2"
+injekt-core = { module = "com.github.mihonapp:injekt", version = "91edab2317" }
+jsoup = "org.jsoup:jsoup:1.18.1"
 rxjava = "io.reactivex:rxjava:1.3.8"
 
 kodein-di = "org.kodein.di:kodein-di-conf-jvm:7.21.1"
@@ -33,8 +33,8 @@ sfl4j-api = "org.slf4j:slf4j-api:2.0.9"
 logback = "ch.qos.logback:logback-classic:1.4.14"
 ktlogging = "io.github.oshai:kotlin-logging-jvm:5.1.1"
 
-d2j-translator = { module = "com.github.ThexXTURBOXx.dex2jar:dex-translator", version.ref = "dex2jar_version" }
-d2j-tools = { module = "com.github.ThexXTURBOXx.dex2jar:dex-tools", version.ref = "dex2jar_version" }
+d2j-translator = { module = "de.femtopedia.dex2jar:dex-translator", version.ref = "dex2jar_version" }
+d2j-tools = { module = "de.femtopedia.dex2jar:dex-tools", version.ref = "dex2jar_version" }
 
 apkparser = "net.dongliu:apk-parser:2.6.10"
 
