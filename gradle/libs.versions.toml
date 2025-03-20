@@ -30,7 +30,7 @@ serialization-protobuf = { module = "org.jetbrains.kotlinx:kotlinx-serialization
 
 # Logging
 sfl4j-api = "org.slf4j:slf4j-api:2.0.13"
-logback = "ch.qos.logback:logback-classic:1.5.6"
+logback = "ch.qos.logback:logback-classic:1.5.18"
 ktlogging = "io.github.oshai:kotlin-logging-jvm:7.0.0"
 
 d2j-translator = { module = "de.femtopedia.dex2jar:dex-translator", version.ref = "dex2jar_version" }
